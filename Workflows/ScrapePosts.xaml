@@ -117,21 +117,9 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="commentsText" />
       <Variable x:TypeArguments="x:String" Name="likesText" />
-      <Variable x:TypeArguments="x:Int32" Name="postIndex">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Int32" Name="comments">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Int32" Name="likes">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="postIndex" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="comments" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="likes" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -167,7 +155,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="452,1548" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[postIndex &lt; numberOfPosts]" DisplayName="While" sap:VirtualizedContainerService.HintSize="452,1548" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                     <ui:InterruptibleWhile.Body>
                       <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1425.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
@@ -224,7 +212,7 @@
                             <OutArgument x:TypeArguments="x:Int32">[likes]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[CInt(likesText.Replace("K","000").Replace("M","000000"))]</InArgument>
+                            <InArgument x:TypeArguments="x:Int32">[If(likesText.Contains("K"), CInt(Double.Parse(likesText.Replace("K", "")) * 1000), If(likesText.Contains("M"), CInt(Double.Parse(likesText.Replace("M", "")) * 1000000), CInt(likesText)))]</InArgument>
                           </Assign.Value>
                         </Assign>
                         <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -232,7 +220,7 @@
                             <OutArgument x:TypeArguments="x:Int32">[comments]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[CInt(commentsText.Replace("K","000").Replace("M","000000"))]</InArgument>
+                            <InArgument x:TypeArguments="x:Int32">[If(commentsText.Contains("K"), CInt(Double.Parse(commentsText.Replace("K", "")) * 1000), If(commentsText.Contains("M"), CInt(Double.Parse(commentsText.Replace("M", "")) * 1000000), CInt(commentsText)))]</InArgument>
                           </Assign.Value>
                         </Assign>
                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Close Post" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
@@ -251,9 +239,6 @@
                         </Assign>
                       </Sequence>
                     </ui:InterruptibleWhile.Body>
-                    <ui:InterruptibleWhile.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="postIndex &lt; numberOfPosts" />
-                    </ui:InterruptibleWhile.Condition>
                   </ui:InterruptibleWhile>
                 </Sequence>
               </uix:NCheckState.IfExists>
