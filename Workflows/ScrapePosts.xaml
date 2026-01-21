@@ -113,7 +113,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapePosts" sap:VirtualizedContainerService.HintSize="860.4000000000001,2639.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapePosts" sap:VirtualizedContainerService.HintSize="860.4000000000001,2655.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="commentsText" />
       <Variable x:TypeArguments="x:String" Name="likesText" />
@@ -135,29 +135,29 @@
       </Assign.Value>
     </Assign>
     <ui:BuildDataTable DataTable="[postsData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="521.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PostIndex&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Likes&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Comments&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,2349.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="521.6,2365.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,2156" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,2172" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check if profile loaded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="486.4,2092" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
+            <uix:NCheckState DisplayName="Check if profile loaded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="486.4,2108" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="484.8,1621.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="484.8,1637.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,966.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[postIndex &lt;= numberOfPosts]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,982.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                     <ui:InterruptibleWhile.Body>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,832" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,848" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -185,29 +185,29 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <uix:NGetText DisplayName="Get Likes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[likesText]" Version="V5">
+                        <uix:NGetText DisplayName="Get Likes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[likesText]" Version="V5">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597074718583262486" CVScreenId="e10f778e-b54f-4200-899b-13bbc68d4438" ContentHash="XNya5O9UCke9Jj05lM_E2A" CvType="AnyWordGroup" DesignTimeRectangle="1337, 400, 40, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='STRONG' parentid='app' data-e2e='browse-like-count' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' tag='STRONG' type='' class='css-p0qi98-7937d88b--StrongText efpxn6t2' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="672ff6fc-e85c-4860-97b7-6814caf2a034" InformativeScreenshot="0b8a0b5843f39aa71f734a21e68d198a.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/hR1W6WKpb06NvnTAvd-tfQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CVScreenId="e10f778e-b54f-4200-899b-13bbc68d4438" CvTextArea="1334, 401, 43, 16" CvTextArgument="13.3K" CvType="Text" DesignTimeRectangle="1289, 390, 88, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-label='13.3K Likes' tag='BUTTON' type='button' class='css-xucbct-7937d88b--ButtonActionItem efpxn6t0' aaname='13.3K' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='13.3K' /&gt;" Guid="cdc579e7-ae1f-4f04-b28c-70a82040a91c" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
                           </uix:NGetText.Target>
                         </uix:NGetText>
-                        <uix:NGetText DisplayName="Get Comments" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[commentsText]" Version="V5">
+                        <uix:NGetText DisplayName="Get Comments" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[commentsText]" Version="V5">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597074718583262486" CVScreenId="ffd0426b-f37e-43de-9385-bb3e7ea870a6" ContentHash="fD6oGj4AQk2ArpBsmhIi1w" CvType="AnyWordGroup" DesignTimeRectangle="1450, 400, 27, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='STRONG' parentid='app' data-e2e='browse-comment-count' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' tag='STRONG' type='' class='css-p0qi98-7937d88b--StrongText efpxn6t2' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="443afc87-3c07-4c57-ab9d-fc3df7640e6f" InformativeScreenshot="425440bbf3253f485dca665243537df0.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/cRq-MWSE80yGSlL30txLbw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CVScreenId="ffd0426b-f37e-43de-9385-bb3e7ea870a6" CvTextArea="1414, 402, 61, 13" CvTextArgument="... 183" CvType="Text" DesignTimeRectangle="1402, 390, 75, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='183' parentid='app' tag='BUTTON' type='button' class='css-xucbct-7937d88b--ButtonActionItem efpxn6t0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='183' /&gt;" Guid="86497aaa-d3d7-411d-870e-cbee8744a017" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
                           </uix:NGetText.Target>
                         </uix:NGetText>
-                        <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[likes]</OutArgument>
                           </Assign.To>
@@ -225,15 +225,12 @@
                         </Assign>
                       </Sequence>
                     </ui:InterruptibleWhile.Body>
-                    <ui:InterruptibleWhile.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="postIndex &lt;= numberOfPosts" />
-                    </ui:InterruptibleWhile.Condition>
                   </ui:InterruptibleWhile>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Close Post" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597074718583262486" CVScreenId="6ed37f0b-230c-48e9-8325-4751bf441226" ContentHash="1teepcAKz0G1Qox-yB35Xg" CvElementArea="31, 140, 55, 55" CvType="CloseButton" DesignTimeRectangle="48, 156, 22, 22" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' parentid='app' tag='svg' /&gt;" Guid="0868157f-0b48-4ad2-9af0-57993ca6b06b" InformativeScreenshot="f708f18e0fec9c2e5464e91497f17135.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/QfEsU5lEu02XDLhctFXPgg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) Official | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="6ed37f0b-230c-48e9-8325-4751bf441226" CvElementArea="31, 140, 55, 55" CvType="CloseButton" DesignTimeRectangle="34, 142, 50, 50" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-label='Close' aria-role='button' tag='BUTTON' /&gt;" Guid="a3bf66da-3b75-43fb-b1f6-0a5334cf8976" SearchSteps="Selector, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
