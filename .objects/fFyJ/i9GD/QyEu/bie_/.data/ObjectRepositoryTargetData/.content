@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="BytEB2pZKEqPPvRzOxAXvQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="tiktok.com/@selly/video/7597804479441800470" CVScreenId="13c9be47-41f9-448c-a1d7-d59dcf3103e3" CvType="AnyWordGroup" DesignTimeRectangle="1354, 645, 483, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='P' data-e2e='comment-level-1' /&gt;" Guid="d1679a55-fbe3-4f66-9557-cc21476f0c70" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) Official | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="445112b1e90bf410c39e28129e7e41a4.png" xmlns="">0DpbBGXTr2k2iFXfBRzscTA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

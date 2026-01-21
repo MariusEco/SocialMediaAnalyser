@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Când apare următorul ep…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "bie_A39JqECBc_HBhCzkoQ",
+  "Reference": "Y56DLgwpgEyMKfeC5KZCfQ/bie_A39JqECBc_HBhCzkoQ",
+  "ParentRef": "Y56DLgwpgEyMKfeC5KZCfQ/QyEuQB_1CUiMU8mQA-V28g",
+  "Created": "2026-01-21T18:01:23.0089442Z",
+  "Updated": "2026-01-21T18:01:23.0089442Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
