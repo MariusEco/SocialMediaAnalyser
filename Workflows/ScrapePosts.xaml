@@ -116,7 +116,7 @@
       <AssemblyReference>C57BC807AA5_v1_sub_s.8KwZ33ZOukN1kwXTz1bzfZ32</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapePosts" sap:VirtualizedContainerService.HintSize="860.4000000000001,3476" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapePosts" sap:VirtualizedContainerService.HintSize="762,4875.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sentiment" />
       <Variable x:TypeArguments="x:String" Name="commentsText" />
@@ -125,21 +125,13 @@
       <Variable x:TypeArguments="x:Int32" Default="0" Name="comments" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="likes" />
       <Variable x:TypeArguments="x:String" Name="firstCommentText" />
-      <Variable x:TypeArguments="x:String" Name="sentiment_1">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">InvokeWorkflowFile_1</x:String>
-            <x:String x:Key="SourcePropertyName">sentiment</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="523.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="560,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[postsData]</OutArgument>
       </Assign.To>
@@ -147,169 +139,245 @@
         <InArgument x:TypeArguments="sd:DataTable">[New DataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BuildDataTable DataTable="[postsData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="523.2,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PostIndex&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Likes&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Comments&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CommentText&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sentiment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="523.2,3186.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V2">
+    <ui:BuildDataTable DataTable="[postsData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="560,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PostIndex&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Likes&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Comments&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CommentText&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sentiment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome New Tab" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="560,4585.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="521.6,2992.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558.4,4392" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check if profile loaded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="488,2928.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
-              <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="486.4,2458.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452.8,2394.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-                    <TryCatch.Try>
-                      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[postIndex &lt; numberOfPosts]" DisplayName="While" sap:VirtualizedContainerService.HintSize="451.2,1877.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
-                        <ui:InterruptibleWhile.Body>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,1779.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="524.8,4328" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+              <TryCatch.Try>
+                <uix:NCheckState DisplayName="Check if profile loaded" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="523.2,3811.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="521.6,3368" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,3304" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <TryCatch.Try>
+                          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[postIndex &lt; numberOfPosts]" DisplayName="While" sap:VirtualizedContainerService.HintSize="486.4,2780.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                            <ui:InterruptibleWhile.Body>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,2682.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:Boolean" Name="boolCommentExists" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click on Post" sap:VirtualizedContainerService.HintSize="451.2,143.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4a5f23fe-5d92-40ef-87f8-f08837dffab4" InformativeScreenshot="19cdc93f6480b5db1affed50b00095e0" Selector="[string.Format(&quot;&lt;webctrl parentid='grid-item-container-{0}' tag='IMG' /&gt;&quot;, postIndex)]" TimeoutMS="10000">
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                                <uix:NGetText DisplayName="Get Likes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,146.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[likesText]" Timeout="10000" Version="V5">
+                                  <uix:NGetText.Target>
+                                    <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597074718583262486" CVScreenId="e10f778e-b54f-4200-899b-13bbc68d4438" ContentHash="XNya5O9UCke9Jj05lM_E2A" CvType="AnyWordGroup" DesignTimeRectangle="1337, 400, 40, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='STRONG' parentid='app' data-e2e='browse-like-count' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' tag='STRONG' type='' class='css-p0qi98-7937d88b--StrongText efpxn6t2' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="672ff6fc-e85c-4860-97b7-6814caf2a034" InformativeScreenshot="0b8a0b5843f39aa71f734a21e68d198a.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/hR1W6WKpb06NvnTAvd-tfQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="e10f778e-b54f-4200-899b-13bbc68d4438" CvTextArea="1334, 401, 43, 16" CvTextArgument="13.3K" CvType="Text" DesignTimeRectangle="1289, 390, 88, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-label='13.3K Likes' tag='BUTTON' type='button' class='css-xucbct-7937d88b--ButtonActionItem efpxn6t0' aaname='13.3K' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='13.3K' /&gt;" Guid="cdc579e7-ae1f-4f04-b28c-70a82040a91c" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NGetText.Target>
+                                </uix:NGetText>
+                                <uix:NGetText DisplayName="Get Comments" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[commentsText]" Timeout="10000" Version="V5">
+                                  <uix:NGetText.Target>
+                                    <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597074718583262486" CVScreenId="ffd0426b-f37e-43de-9385-bb3e7ea870a6" ContentHash="fD6oGj4AQk2ArpBsmhIi1w" CvType="AnyWordGroup" DesignTimeRectangle="1450, 400, 27, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='STRONG' parentid='app' data-e2e='browse-comment-count' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' tag='STRONG' type='' class='css-p0qi98-7937d88b--StrongText efpxn6t2' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="443afc87-3c07-4c57-ab9d-fc3df7640e6f" InformativeScreenshot="425440bbf3253f485dca665243537df0.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/cRq-MWSE80yGSlL30txLbw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="ffd0426b-f37e-43de-9385-bb3e7ea870a6" CvTextArea="1414, 402, 61, 13" CvTextArgument="... 183" CvType="Text" DesignTimeRectangle="1402, 390, 75, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='183' parentid='app' tag='BUTTON' type='button' class='css-xucbct-7937d88b--ButtonActionItem efpxn6t0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='183' /&gt;" Guid="86497aaa-d3d7-411d-870e-cbee8744a017" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NGetText.Target>
+                                </uix:NGetText>
+                                <ui:UiElementExists DisplayName="First Comment Exists" Exists="[boolCommentExists]" sap:VirtualizedContainerService.HintSize="451.2,143.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                                  <ui:UiElementExists.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d26dc152-3066-4255-8a16-e7b4436dfb9a" InformativeScreenshot="227bbc6cf94b6c32a2cb8571d735c990" Selector="&lt;webctrl tag='P' data-e2e='comment-level-1' /&gt;" TimeoutMS="10000">
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:UiElementExists.Target>
+                                </ui:UiElementExists>
+                                <If Condition="[boolCommentExists]" sap:VirtualizedContainerService.HintSize="451.2,746.4" sap2010:WorkflowViewState.IdRef="If_3">
+                                  <If.Then>
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,378.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NGetText DisplayName="Get First Comment" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,142.4" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[firstCommentText]" Version="V5">
+                                        <uix:NGetText.Target>
+                                          <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597804479441800470" CVScreenId="13c9be47-41f9-448c-a1d7-d59dcf3103e3" CvType="AnyWordGroup" DesignTimeRectangle="1354, 645, 483, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='P' data-e2e='comment-level-1' /&gt;" Guid="d1679a55-fbe3-4f66-9557-cc21476f0c70" InformativeScreenshot="445112b1e90bf410c39e28129e7e41a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) Official | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
+                                        </uix:NGetText.Target>
+                                      </uix:NGetText>
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke AnalyzeSentiment" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\AnalyzeSentiment.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="sentiment">[sentiment]</OutArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="inputText">[firstCommentText]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,229.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;Nu exista comentarii pentru aceasta postare: &quot; + postIndex.ToString + &quot; de la profilul &quot; + profileUrl]" />
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                                <Assign sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[likes]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[If(likesText.Contains("K"), CInt(Double.Parse(likesText.Replace("K", "")) * 1000), If(likesText.Contains("M"), CInt(Double.Parse(likesText.Replace("M", "")) * 1000000), CInt(likesText)))]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[comments]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[If(commentsText.Contains("K"), CInt(Double.Parse(commentsText.Replace("K", "")) * 1000), If(commentsText.Contains("M"), CInt(Double.Parse(commentsText.Replace("M", "")) * 1000000), CInt(commentsText)))]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Close Post" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597804479441800470" CVScreenId="af9a716e-eb50-4a07-b2d0-e0e4d0a79de6" ContentHash="tbSuGUsbSEaHUnlqac-DoQ" CvElementArea="37, 219, 66, 66" CvType="CloseButton" DesignTimeRectangle="59, 240, 24, 24" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' parentid='app' tag='path' /&gt;" Guid="aff763b0-3362-4a30-859e-a2c3c52e9a88" InformativeScreenshot="75dc464624d39dd69af34f8139b1a4ea.png" Reference="Y56DLgwpgEyMKfeC5KZCfQ/7oT2WEic5E-GRFdcKThj9w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(99+)selly (@selly) oficial | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CType(postIndex, Object), CType(likes, Object), CType(comments, Object), firstCommentText, sentiment}]" DataTable="[postsData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="451.2,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                <Assign sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[firstCommentText]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[sentiment]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="451.2,169.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[postIndex]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[postIndex + 1]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ui:InterruptibleWhile.Body>
+                          </ui:InterruptibleWhile>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                            <ActivityAction x:TypeArguments="s:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486.4,233.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452.8,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;[SCRAPE] Profil: &quot; + profileURL + &quot; | Post index: &quot; + postIndex.ToString + &quot; | Eroare la extragere date postare: &quot; + exception.Message]" />
+                              </Sequence>
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                        <TryCatch.Finally>
+                          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="486.4,94.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click on Post" sap:VirtualizedContainerService.HintSize="416,143.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4a5f23fe-5d92-40ef-87f8-f08837dffab4" InformativeScreenshot="19cdc93f6480b5db1affed50b00095e0" Selector="[string.Format(&quot;&lt;webctrl parentid='grid-item-container-{0}' tag='IMG' /&gt;&quot;, postIndex)]">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <uix:NGetText DisplayName="Get Likes" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[likesText]" Version="V5">
-                              <uix:NGetText.Target>
-                                <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597074718583262486" CVScreenId="e10f778e-b54f-4200-899b-13bbc68d4438" ContentHash="XNya5O9UCke9Jj05lM_E2A" CvType="AnyWordGroup" DesignTimeRectangle="1337, 400, 40, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='STRONG' parentid='app' data-e2e='browse-like-count' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' tag='STRONG' type='' class='css-p0qi98-7937d88b--StrongText efpxn6t2' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="672ff6fc-e85c-4860-97b7-6814caf2a034" InformativeScreenshot="0b8a0b5843f39aa71f734a21e68d198a.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/hR1W6WKpb06NvnTAvd-tfQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CVScreenId="e10f778e-b54f-4200-899b-13bbc68d4438" CvTextArea="1334, 401, 43, 16" CvTextArgument="13.3K" CvType="Text" DesignTimeRectangle="1289, 390, 88, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-label='13.3K Likes' tag='BUTTON' type='button' class='css-xucbct-7937d88b--ButtonActionItem efpxn6t0' aaname='13.3K' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='13.3K' /&gt;" Guid="cdc579e7-ae1f-4f04-b28c-70a82040a91c" SearchSteps="FuzzySelector, CV" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NGetText.Target>
-                            </uix:NGetText>
-                            <uix:NGetText DisplayName="Get Comments" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[commentsText]" Version="V5">
-                              <uix:NGetText.Target>
-                                <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597074718583262486" CVScreenId="ffd0426b-f37e-43de-9385-bb3e7ea870a6" ContentHash="fD6oGj4AQk2ArpBsmhIi1w" CvType="AnyWordGroup" DesignTimeRectangle="1450, 400, 27, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='STRONG' parentid='app' data-e2e='browse-comment-count' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' tag='STRONG' type='' class='css-p0qi98-7937d88b--StrongText efpxn6t2' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="443afc87-3c07-4c57-ab9d-fc3df7640e6f" InformativeScreenshot="425440bbf3253f485dca665243537df0.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/cRq-MWSE80yGSlL30txLbw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CVScreenId="ffd0426b-f37e-43de-9385-bb3e7ea870a6" CvTextArea="1414, 402, 61, 13" CvTextArgument="... 183" CvType="Text" DesignTimeRectangle="1402, 390, 75, 40" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='183' parentid='app' tag='BUTTON' type='button' class='css-xucbct-7937d88b--ButtonActionItem efpxn6t0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='183' /&gt;" Guid="86497aaa-d3d7-411d-870e-cbee8744a017" SearchSteps="FuzzySelector, CV" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NGetText.Target>
-                            </uix:NGetText>
-                            <uix:NGetText DisplayName="Get First Comment" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,146.4" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" TextString="[firstCommentText]" Version="V5">
-                              <uix:NGetText.Target>
-                                <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597804479441800470" CVScreenId="13c9be47-41f9-448c-a1d7-d59dcf3103e3" ContentHash="BytEB2pZKEqPPvRzOxAXvQ" CvType="AnyWordGroup" DesignTimeRectangle="1354, 645, 483, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='P' data-e2e='comment-level-1' /&gt;" Guid="d1679a55-fbe3-4f66-9557-cc21476f0c70" InformativeScreenshot="445112b1e90bf410c39e28129e7e41a4.png" Reference="Y56DLgwpgEyMKfeC5KZCfQ/bie_A39JqECBc_HBhCzkoQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) Official | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
-                              </uix:NGetText.Target>
-                            </uix:NGetText>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke AnalyzeSentiment" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\AnalyzeSentiment.xaml">
-                              <ui:InvokeWorkflowFile.Arguments>
-                                <OutArgument x:TypeArguments="x:String" x:Key="sentiment">[sentiment]</OutArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="inputText">[firstCommentText]</InArgument>
-                              </ui:InvokeWorkflowFile.Arguments>
-                            </ui:InvokeWorkflowFile>
-                            <Assign sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[likes]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[If(likesText.Contains("K"), CInt(Double.Parse(likesText.Replace("K", "")) * 1000), If(likesText.Contains("M"), CInt(Double.Parse(likesText.Replace("M", "")) * 1000000), CInt(likesText)))]</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="Assign_3">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[comments]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[If(commentsText.Contains("K"), CInt(Double.Parse(commentsText.Replace("K", "")) * 1000), If(commentsText.Contains("M"), CInt(Double.Parse(commentsText.Replace("M", "")) * 1000000), CInt(commentsText)))]</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Close Post" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a53075bc-4376-465e-accf-3b3ad9050d1b" Version="V5">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable BrowserURL="tiktok.com/@selly/video/7597804479441800470" CVScreenId="af9a716e-eb50-4a07-b2d0-e0e4d0a79de6" ContentHash="tbSuGUsbSEaHUnlqac-DoQ" CvElementArea="37, 219, 66, 66" CvType="CloseButton" DesignTimeRectangle="59, 240, 24, 24" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' parentid='app' tag='path' /&gt;" Guid="aff763b0-3362-4a30-859e-a2c3c52e9a88" InformativeScreenshot="75dc464624d39dd69af34f8139b1a4ea.png" Reference="Y56DLgwpgEyMKfeC5KZCfQ/7oT2WEic5E-GRFdcKThj9w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(99+)selly (@selly) oficial | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
-                              </uix:NClick.Target>
-                            </uix:NClick>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CType(postIndex, Object), CType(likes, Object), CType(comments, Object), firstCommentText, sentiment}]" DataTable="[postsData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                            <Assign sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="Assign_4">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[postIndex]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">[postIndex + 1]</InArgument>
-                              </Assign.Value>
-                            </Assign>
                           </Sequence>
-                        </ui:InterruptibleWhile.Body>
-                      </ui:InterruptibleWhile>
-                    </TryCatch.Try>
-                    <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-                        <ActivityAction x:TypeArguments="s:Exception">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="451.2,233.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;[SCRAPE] Profil: &quot; + profileURL + &quot; | Post index: &quot; + postIndex.ToString + &quot; | Eroare la extragere date postare: &quot; + exception.Message]" />
-                          </Sequence>
-                        </ActivityAction>
-                      </Catch>
-                    </TryCatch.Catches>
-                    <TryCatch.Finally>
-                      <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="451.2,94.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </TryCatch.Finally>
-                  </TryCatch>
-                </Sequence>
-              </uix:NCheckState.IfExists>
-              <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="486.4,181.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        </TryCatch.Finally>
+                      </TryCatch>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="521.6,181.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Throw Exception="[New Exception(&quot;Profilul de TikTok nu s-a incarcat&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="tiktok.com/@selly" CVScreenId="e863d341-4ec7-4e78-bfa9-3328fe811e07" ContentHash="wfr06RqQTEqq2VhbXEK6Pg" DesignTimeRectangle="649, 229, 63, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' data-e2e='user-title' /&gt;" Guid="053cb5ef-6b3d-46f2-9408-cdd8ca996e90" InformativeScreenshot="413f8c50a2bc6bc542570c2b27d6e6b0.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/ak6I0VB-a0O-ltRFP9cCCw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="523.2,233.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="489.6,169.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[exception.Message]" />
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="523.2,94.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[New Exception(&quot;Profilul de TikTok nu s-a incarcat&quot;)]" sap:VirtualizedContainerService.HintSize="416,117.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
                 </Sequence>
-              </uix:NCheckState.IfNotExists>
-              <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="tiktok.com/@selly" CVScreenId="e863d341-4ec7-4e78-bfa9-3328fe811e07" ContentHash="wfr06RqQTEqq2VhbXEK6Pg" DesignTimeRectangle="649, 229, 63, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' data-e2e='user-title' /&gt;" Guid="053cb5ef-6b3d-46f2-9408-cdd8ca996e90" InformativeScreenshot="413f8c50a2bc6bc542570c2b27d6e6b0.png" Reference="rTlZmAgZnEiEgGSv4eXfcw/ak6I0VB-a0O-ltRFP9cCCw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) | TikTok' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
-              </uix:NCheckState.Target>
-            </uix:NCheckState>
+              </TryCatch.Finally>
+            </TryCatch>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
