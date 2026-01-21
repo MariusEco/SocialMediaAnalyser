@@ -1,0 +1,6 @@
+{
+  "Name": "SocialMediaAnalyser",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}
