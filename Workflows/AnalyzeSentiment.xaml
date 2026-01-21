@@ -100,15 +100,15 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AnalyzeSentiment" sap:VirtualizedContainerService.HintSize="860.4000000000001,898.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AnalyzeSentiment" sap:VirtualizedContainerService.HintSize="1068,889.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="451.2,875.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,866.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACs1Wa28aORT9K9Z8XE2nkDRpFykfYLoP2rSgDu2uUkXIzFzAxdiz9jWERPnvez0vkvJIvqVCAuy5c33OucfXvgv+FCAzG2uFXCgwQecuSICbdM4nEsqHQef7dRj0Ve6wmbgLPvMlBJ0A4QaDMHgvbC75ppocVZNgUyNyFFr5yTkwH81Qswkwrrjc3ELGptowCwrFkr7ordEm9zksGqFmNE60wYHJPLZ2GHyB/5wwkAUdNA7CEv+lTnm1Sk9nm+Ce8A4c7gXcLNX1AKywkV6B4VIm9YMEzQ6jQRnDmqAdepWEliHxbBZhNtXGk82Y5BOQT/KjpGJG+e7uS65gMehMubTE9QvYXCsLNfd6HDvD8bAkpRK00kDFXK24LQPvwyOaNDM9A3yR6bXap0qjBmvC9ujiFFqmpyzXVqBYQcgUzHj9zyEJGxYKoUYumUUi45Pa42KdvKhAqVZTkYFK4RJWRV0fSxM3z1kTsLMdKuexbTImfbBXy9uIV6tthRAKYUbsHylxSpS0WXIsA87fBC8qzQI2w7nhFix55vtv1zvafIQNqyJ2ZOmystZeAkrE8jKOeXlQTAU1DKF+2mO1TNFxw7z5ZXbXg7o+VqaO2JHlPVBzkUQebihcFYvXLtkV4rgOZy/K3SkCgVoddMfXJmBHhcRNUALbpmAZIKS4NUVxwKwFzv1IGCaWOU+fOFXOX8gXHwSOV+1Op9Ho1UFfbBvtQYdsOX4VQ47zqO9bBUGkxwmYlUgh6qbUdakHg42Sf/6glMXf+OxtL37XetvtnhGesXWTcQNpKZSzYy9OjW0cU6tHiHpUBQnRs18I2b51oncf11enp1cDt/jcXqz/Hd22J7fTq9OTkH0DYwn7RTtq+Q+97yQ6AxfNmTF0EylS6iYjvQB1oZz0bfap+j2zUHTjsVShIroq3TW5o6/ofKJGPeSGSoOE0V+ZKqyUrUBLyaj/K3KmNgSPpp3IqSavqh8uTLagoKoem6pwtaMIyuQHvVwV/6BH/kbMPwHONQEMhpo4E0DPTAq6WNXJj1ko5ukcSAy9cPk3Lkm3cg+U8z2j1xZMn47jan5oxJKbDXGqboVDni74DB7yPzl5LEC9rQtXsr9Adftsa8SHkQ+znLei3xshnrEZnqfYIKcDt76YFLbckXGQjGjOY6XR61X79d5El1zNHBGnGPB3nk/8ZkjDhISnm0mrRVm5LS5F1G7iOUV7aStH+utxT+p0UYh4/z8OmnBmhQsAAA==" ConnectionId="cb0e6515-b06c-4428-9b94-8957bc807aa5" DisplayName="Sentiment Analysis" sap:VirtualizedContainerService.HintSize="449.6,184" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="2141cadf-6675-3876-bd1f-14adadee2c79">
+        <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACs1Wa28aORT9K9Z8XE2nkDRpFykfYLoP2rSgDu2uUkXIzFzAxdiz9jWERPnvez0vkvJIvqVCAuy5c33OucfXvgv+FCAzG2uFXCgwQecuSICbdM4nEsqHQef7dRj0Ve6wmbgLPvMlBJ0A4QaDMHgvbC75ppocVZNgUyNyFFr5yTkwH81Qswkwrrjc3ELGptowCwrFkr7ordEm9zksGqFmNE60wYHJPLZ2GHyB/5wwkAUdNA7CEv+lTnm1Sk9nm+Ce8A4c7gXcLNX1AKywkV6B4VIm9YMEzQ6jQRnDmqAdepWEliHxbBZhNtXGk82Y5BOQT/KjpGJG+e7uS65gMehMubTE9QvYXCsLNfd6HDvD8bAkpRK00kDFXK24LQPvwyOaNDM9A3yR6bXap0qjBmvC9ujiFFqmpyzXVqBYQcgUzHj9zyEJGxYKoUYumUUi45Pa42KdvKhAqVZTkYFK4RJWRV0fSxM3z1kTsLMdKuexbTImfbBXy9uIV6tthRAKYUbsHylxSpS0WXIsA87fBC8qzQI2w7nhFix55vtv1zvafIQNqyJ2ZOmystZeAkrE8jKOeXlQTAU1DKF+2mO1TNFxw7z5ZXbXg7o+VqaO2JHlPVBzkUQebihcFYvXLtkV4rgOZy/K3SkCgVoddMfXJmBHhcRNUALbpmAZIKS4NUVxwKwFzv1IGCaWOU+fOFXOX8gXHwSOV+1Op9Ho1UFfbBvtQYdsOX4VQ47zqO9bBUGkxwmYlUgh6qbUdakHg42Sf/6glMXf+OxtL37XetvtnhGesXWTcQNpKZSzYy9OjW0cU6tHiHpUBQnRs18I2b51oncf11enp1cDt/jcXqz/Hd22J7fTq9OTkH0DYwn7RTtq+Q+97yQ6AxfNmTF0EylS6iYjvQB1oZz0bfap+j2zUHTjsVShIroq3TW5o6/ofKJGPeSGSoOE0V+ZKqyUrUBLyaj/K3KmNgSPpp3IqSavqh8uTLagoKoem6pwtaMIyuQHvVwV/6BH/kbMPwHONQEMhpo4E0DPTAq6WNXJj1ko5ukcSAy9cPk3Lkm3cg+U8z2j1xZMn47jan5oxJKbDXGqboVDni74DB7yPzl5LEC9rQtXsr9Adftsa8SHkQ+znLei3xshnrEZnqfYIKcDt76YFLbckXGQjGjOY6XR61X79d5El1zNHBGnGPB3nk/8ZkjDhISnm0mrRVm5LS5F1G7iOUV7aStH+utxT+p0UYh4/z8OmnBmhQsAAA==" ConnectionId="db34c78f-17e4-4338-b21d-00626fb12282" DisplayName="Sentiment Analysis" sap:VirtualizedContainerService.HintSize="450,185.33333333333334" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="2141cadf-6675-3876-bd1f-14adadee2c79">
           <isactr:ConnectorActivity.FieldObjects>
             <isactr:FieldObject Name="text" Type="FieldArgument">
               <isactr:FieldObject.Value>
@@ -159,14 +159,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,412" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,404" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;[AI] Eroare la analiza sentimentului | Text: &quot; + If(inputText.Length &gt; 50, inputText.Substring(0,50) + &quot;...&quot;, inputText) + &#xD;&#xA;&quot; | Detalii: &quot; + exception.Message]" />
-              <Assign sap:VirtualizedContainerService.HintSize="416,169.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;[AI] Eroare la analiza sentimentului | Text: &quot; + If(inputText.Length &gt; 50, inputText.Substring(0,50) + &quot;...&quot;, inputText) + &#xA;&quot; | Detalii: &quot; + exception.Message]" />
+              <Assign sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[sentiment]</OutArgument>
                 </Assign.To>
@@ -179,7 +179,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="449.6,94.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
