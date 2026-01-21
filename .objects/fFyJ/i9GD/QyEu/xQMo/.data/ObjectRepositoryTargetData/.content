@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="FUoYwSgRlEek5nPlGMEE6Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="tiktok.com/@selly/video/7597804479441800470" CVScreenId="03fb1446-092f-4d36-8754-0bd9c518242a" CvType="AnyWordGroup" DesignTimeRectangle="1354, 647, 416, 22" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;span' tag='SPAN' /&gt;" Guid="65f74d5a-4ae7-4f35-a7d7-c03b2be4ee1d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='selly (@selly) Official | TikTok' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="03fb1446-092f-4d36-8754-0bd9c518242a" CvTextArea="1380, 624, 44, 16" CvTextArgument="David" CvType="Text" DesignTimeRectangle="1354, 622, 95, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='David ' parentid='7597806326127198998' tag='SPAN' type='' class='css-1vzyycz-7937d88b--SpanUserNameText e1pis9463' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='David' /&gt;" Guid="67342de4-9330-40a6-a195-f3060a447989" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0038ec98c55be05e23eb02c0aad26ca5.png" xmlns="">08PQgkQtG_0igbJXGO1Pkhw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
